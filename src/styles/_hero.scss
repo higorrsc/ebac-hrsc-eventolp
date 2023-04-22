@@ -1,0 +1,67 @@
+@use 'variables';
+
+.hero {
+    padding-top: 32px;
+    padding-bottom: 64px;
+    background-image: url(../images/presente.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$midnight;
+        content: "";
+        opacity: 0.6;
+    }
+
+    &__title {
+        margin: 64px 0;
+        color: variables.$clouds;
+        font-size: 48px;
+        line-height: 48px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 32px 0;
+        color: variables.$clouds;
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__emphasis {
+        margin: 8px 0;
+        color: variables.$belizeHole;
+        font-family: 'Pathway Extreme', sans-serif;
+        font-size: 240px;
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+
+        &__text {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}

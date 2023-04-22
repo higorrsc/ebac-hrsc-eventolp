@@ -1,0 +1,42 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 24px;
+    background-color: variables.$silver;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__infos {
+        display: flex;
+        gap: 240px;
+
+        b {
+            color: variables.$wetAsp;
+        }
+
+        &__item {
+            font-size: 14px;
+            color: variables.$wetAsp;
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+
+        &__infos {
+            display: block;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    @media (max-width: 1024) {
+        &__infos {
+            gap: 16px;
+        }
+    }
+
+}
